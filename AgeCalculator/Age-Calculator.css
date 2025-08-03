@@ -1,0 +1,209 @@
+:root {
+    --primary: #6c5ce7;
+    --secondary: #a29bfe;
+    --accent: #fd79a8;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --success: #00b894;
+    --error: #d63031;
+    --warning: #fdcb6e;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.calculator-container {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    transition: all 0.3s ease;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.header h1 {
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+}
+
+.header p {
+    color: var(--dark);
+    opacity: 0.8;
+}
+
+.icon {
+    font-size: 2.5rem;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+}
+
+.input-row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 1rem;
+}
+
+.input-group {
+    flex: 1;
+}
+
+.input-group label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 0.5rem;
+    color: var(--dark);
+    font-weight: 500;
+}
+
+.input-group label i {
+    color: var(--primary);
+}
+
+input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+input:focus {
+    border-color: var(--primary);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.2);
+}
+
+button {
+    width: 100%;
+    padding: 1rem;
+    background: linear-gradient(to right, var(--primary), var(--secondary));
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(108, 92, 231, 0.4);
+}
+
+.result-container {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background-color: var(--light);
+    border-radius: 10px;
+    text-align: center;
+    display: none;
+}
+
+.result-card {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+}
+
+.age-item {
+    text-align: center;
+}
+
+.age-item span {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary);
+    display: block;
+    line-height: 1;
+}
+
+.age-item small {
+    color: var(--dark);
+    opacity: 0.7;
+    font-size: 0.9rem;
+}
+
+#birthday-message {
+    color: var(--accent);
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+.error-container {
+    color: var(--error);
+    margin-top: 1rem;
+    padding: 0.8rem;
+    background-color: rgba(214, 48, 49, 0.1);
+    border-radius: 8px;
+    text-align: center;
+    display: none;
+}
+
+.fun-fact {
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: rgba(253, 203, 110, 0.2);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.fun-fact i {
+    color: var(--warning);
+    font-size: 1.2rem;
+}
+
+.fun-fact p {
+    color: var(--dark);
+    font-size: 0.9rem;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    .input-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .calculator-container {
+        padding: 1.5rem;
+    }
+    
+    .result-card {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .age-item span {
+        font-size: 2rem;
+    }
+}
